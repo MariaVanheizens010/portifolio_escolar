@@ -1,0 +1,167 @@
+:root {
+    /*Fontes*/
+    --font-inner: 'Inter', sans-serif;
+    --font-Montserrat: 'Montserrat', sans-serif;
+    --font-Roboto: 'Roboto', sans-serif;
+    /*Geral*/
+    --gold: #ffc83d;
+    --text: #f4f7f5;
+    --muted: #6f8ca0;
+    --green: #29d487;
+    --shadow-text: rgba(22, 148, 164, 0.8);
+
+    /*Navegação*/
+    --bg-navbar:rgba(23, 8, 66, 0.8);
+
+    /*section Sobre*/
+    --bg-painel: #2e25385f;
+    --title: #7cd695e1;
+
+}
+
+body {
+    background: radial-gradient(circle at 70% 10%, rgba(225, 190, 16, 0.362), transparent 50%),
+        linear-gradient(90deg, #070118, #190e31 55%);
+    color: var(--text);
+    margin: 0;
+    font-family: var(--font-inner);
+    z-index: 1;
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: -15vw;
+  left: 20%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, transparent 65%);
+  filter: blur(80px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  bottom: 5vw;
+  right: 5%;
+  width: 45vw;
+  height: 45vw;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.09) 0%, transparent 70%);
+  filter: blur(90px);
+  z-index: -1;
+  pointer-events: none;
+}
+/*--------------NAVBAR--------------*/
+.navbar {
+    background-color: var(--bg-navbar);
+    color: var(--text);
+}
+
+.navbar-nav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;    
+}
+
+.nav-link {
+    color: var(--text);
+}
+
+.navbar .nav-link.active {
+    color: var(--gold);
+}
+
+.navbar a:hover{
+    color: var(--gold);
+    text-decoration: none;
+    transition: 0.6s ease; 
+}
+.navbar .active:hover {
+    text-decoration: none;
+    transition: 0.6s ease;
+}
+
+.navbar-brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-inner);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #ffffff !important;
+}
+
+/*--------------HERO--------------*/
+main{
+    z-index: 2;
+}
+.hero-section {
+    position: relative;
+    padding: 5rem 0 2rem;
+}
+.hero-section .container{
+    padding-left: 20px;
+}
+.hero-section .badge-glass{
+    font-size: 12px;
+}
+
+.hero-description {
+    font-size: 1.15rem;
+    color: var(--muted);
+    max-width: 580px;
+    margin-bottom: 2rem;
+}
+
+#nome {
+    font-family: var(--font-Montserrat);
+    word-spacing: -8px;
+    font-size: 4.5rem;
+    font-weight: 500;
+    line-height: 1.15;
+    margin: 0 0 1.25rem 0;
+    color: white;
+}
+
+#home strong{
+    font-weight: 250;
+    color: var(--gold);
+}
+/*--------------SECTION--------------*/
+section#sobre{
+    background-color:#0701185f;
+}
+.section-title-wrap {
+    text-align: center;
+    margin-bottom: 2.0rem;
+}
+.section-title-wrap .section-title{
+    max-width: 250%;
+}
+
+.painel {
+    border: 1px solid #8d8d8d8a;
+    border-radius: 8px;
+    padding: 2.2rem;
+    height: 100%;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.406);
+    background-color: var(--bg-painel);
+}
+.painel:hover{
+    border: 1px solid #b67e0e8a;
+    box-shadow: 0 5px 25px rgba(255, 213, 0, 0.285);
+    transition: 0.3s ease;
+}
+.painel .h2{
+    font-weight: 300;
+    margin-bottom: 4px;
+    color: var(--title);
+    font-family: var(--font-Roboto);
+}
+.painel p{
+    text-align: justify;
+    line-height: 1.5rem;
+    color: var(--muted);
+}
