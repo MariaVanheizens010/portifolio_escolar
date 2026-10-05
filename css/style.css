@@ -3,6 +3,8 @@
     --font-inner: 'Inter', sans-serif;
     --font-Montserrat: 'Montserrat', sans-serif;
     --font-Roboto: 'Roboto', sans-serif;
+    --font-titulo: 'Playfair Display', serif;
+
     /*Geral*/
     --gold: #ffc83d;
     --text: #f4f7f5;
@@ -17,7 +19,7 @@
     --title: #7cd695e1;
 
     /*projetos*/
-    --shadow-bg: #0701188b;
+    --shadow-bg: #5c079533;
 
     /* Glass */
     --glass-bg: rgba(255, 255, 255, 0.045);
@@ -43,8 +45,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 
-    background: radial-gradient(circle at 70% 5%, rgba(225, 190, 16, 0.362), transparent 30%),
-        linear-gradient(180deg, #070118, #190e31 55%);
+    background: linear-gradient(135deg, #1d1121, #0f0e39 70%);
 
     color: var(--text);
     margin: 0;
@@ -155,7 +156,7 @@ main {
 }
 
 #nomecabecario {
-    font-family: var(--font-Montserrat);
+    font-family: var(--font-titulo);
     word-spacing: -8px;
     font-size: 4.5rem;
     font-weight: 500;
@@ -172,17 +173,30 @@ main {
 .hero-avatar-wrapper {
     position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 30px;
 }
-
+/* Caixa decorativa atrás da imagem */
+.caixa-decoracao {
+    position: absolute;
+    width: 75%;
+    height: 90%;
+    background: #b8a083;
+    z-index: 0;
+    transform: translate(-25px, 25px);
+}
+/* Imagem fica por cima da caixa */
 .hero-avatar-img {
+    position: relative;
+    z-index: 1;
+
     width: 100%;
     max-width: 400px;
     height: auto;
     display: block;
 }
+
 
 
 /*===================================================================================================================================================*/
@@ -191,16 +205,18 @@ main {
 
 section#sobre {
     background-color: #0701185f;
-    margin-top: 4px;
 }
 
 .section-title {
     max-width: 100%;
+    font-family: var(--font-titulo);
+    color: #e0b50bf3;
+    text-shadow: 0 5px 15px #45965eb8;
 }
 
 .section-title-wrap {
     text-align: center;
-    margin-bottom: 2.0rem;
+    margin-bottom: 3.0rem;
 }
 
 .section-title-wrap .section-title {
@@ -240,8 +256,7 @@ section#sobre {
 /*-------------PROJETOS-------------*/
 /*===================================================================================================================================================*/
 section#projetos {
-    padding: 5px 0;
-    background-color: var(--shadow-bg);
+    padding: 3px 0;
 }
 
 .projeto-destaque {
@@ -253,7 +268,7 @@ section#projetos {
     border: 1px solid #8d8d8d8a;
 
     border-radius: 18px;
-    background-color: #42414365;
+    background-color: #1a023365;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.406);
 }
 
