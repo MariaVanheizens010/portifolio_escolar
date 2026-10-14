@@ -29,6 +29,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
+    <!--perdi a fonte-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -43,8 +44,7 @@
         <nav class="navbar navbar-expand-lg fixed-top navbar-custom" aria-label="Navegação Principal">
             <div class="container">
                 <a class="navbar-brand navbar-brand-logo" href="#home">
-                    <span class="logo-badge">&lt;/&gt;</span>
-                    <span>Dev.<span class="text-gradient">AMS</span></span>
+                    <span>Portfólio Acadêmico |<span class="text-gradient-color">Maria Machado</span></span>
                 </a>
             </div>
             <div class="container-fluid">
@@ -65,7 +65,7 @@
         <!--==================================================================================================-->
 
         <section class="hero-section" id="home">
-            <div class="container">
+            <div class="container-inicial">
                 <div class="row align-items-center">
 
                     <!-- COLUNA DO TEXTO -->
@@ -92,12 +92,9 @@
                             <a href="#sobre" class="btn btn-outline-secondary">Sobre mim</a>
                         </div>
                     </div>
-                    <!-- COLUNA DA IMAGEM -->
                     <div class="col-lg-5">
-                        <div class="hero-avatar-wrapper">
-                            <div class="caixa-decoracao"></div>
-                            <img src="assets/images/avatar.svg" alt="Avatar ilustrado do desenvolvedor estudante"
-                                class="hero-avatar-img">
+                        <div class="foto-container">
+                            <img src="IMG/minha-foto.jpg" alt="Foto de perfil" class="foto-perfil img-fluid">
                         </div>
                     </div>
                 </div>
@@ -113,25 +110,39 @@
             <div class="container py-4">
                 <div class="section-title-wrap mt-5">
                     <span class="section-tag">Apresentação &amp; Contexto</span>
-                    <h2 class="section-title">Sobre Mim &amp; <span class="text-gradient">Formação AMS</span></h2>
+                    <h2 class="section-title">Sobre Mim &amp; <span class="text-gradient-color">Formação AMS</span></h2>
                 </div>
-
 
                 <div class="row g-4">
                     <!-- Card Biografia & Objetivos -->
                     <div class="col-lg-7">
-                        <div class="painel">
-                            <h3 class="h2 mb-3 text-center">Minha tragetória acadêmica</h3>
+                        <div class="mim-sobre">
+                            <h3 class="h2 mb-3 text-center">Minha <span class="text-gradient-color">trajetória</span>
+                                acadêmica</h3>
                             <p>
-                                Iniciei minha jornada na tecnologia motivado pela curiosidade de entender como sistemas
-                                operam nos bastidores e como o código pode resolver problemas reais da sociedade e das
-                                empresas.
+                                Minha trajetória na área de tecnologia é motivada
+                                pela curiosidade de compreender como sites e sistemas
+                                funcionam e como podem ser desenvolvidos. Esse
+                                interesse me levou a buscar conhecimentos em
+                                programação e desenvolvimento de soluções digitais.
                             </p>
+
                             <p>
-                                No curso técnico de <strong>Desenvolvimento de Sistemas</strong> da <em>Etec Pedro
-                                    Ferreira Alves</em>, desenvolvo projetos práticos aplicando lógica de programação,
-                                orientação a objetos, bancos de dados relacionais e modelagem de software com apoio de
-                                professores qualificados, incluindo o <strong>Prof. Maromo</strong>.
+                                Atualmente, curso Técnico em
+                                <strong>Desenvolvimento de Sistemas</strong>
+                                na <em>Etec Pedro Ferreira Alves</em>, integrado ao
+                                programa AMS, com continuidade acadêmica na
+                                <em>Fatec Mogi Mirim</em>. Ao longo dessa formação,
+                                busco ampliar meus conhecimentos, desenvolver
+                                habilidades técnicas e compreender melhor as
+                                diferentes áreas da tecnologia.
+                            </p>
+
+                            <p>
+                                Além dos estudos, tenho interesse por leitura,
+                                desenho e música atividades que fazem parte da minha vida
+                                pessoal e que me permitem explorar diferentes formas
+                                de expressão e criatividade.
                             </p>
                         </div>
                     </div>
@@ -190,59 +201,41 @@
         <!--==================================================================================================-->
 
 
-        <section id="projetos" class="mt-6">
-            <div class="container py-5">
-                <div class="section-title-wrap mt-5">
-                    <span class="section-tag">Meus trabalhos</span>
-                    <h2 class="section-title">Atividades e <span class="text-gradient-cyan">Projetos Etec</span>
-                    </h2>
+        <section id="projetos" class="py-5">
+            <div class="container projetos-section">
+                <div class="section-title-wrap text-center">
+                    <span class="section-tag">Meus Trabalhos</span>
+                    <h2 class="section-title">Meus <span class="text-gradient-color">Projetos</span></h2>
+                    <p class="section-subtitle">
+                        Aqui estão alguns dos principais trabalhos e sistemas desenvolvidos em sala de aula e em estudos
+                        particulares.
+                    </p>
                 </div>
+
                 <div class="row g-4">
-                    <div class="col-lg-6 mt-2">
-                        <article class="projeto-destaque">
-                            <div class="projeto-imagem">
-                                <img src="IMG/patas&lares.png" alt="Página do projeto Patas e Lares">
-                            </div>
-
-                            <div class="projeto-conteudo">
-                                <span class="projeto-numero">PROJETO 01</span>
-                                <h3>Patas&Lares</h3>
-                                <p>Site desenvolvido em sala de aula para aprimoramento de CSS e BOOTSTRAP feito em
-                                    sala.</p>
-                                <div class="tecnologias">
-                                    <span>HTML</span>
-                                    <span>CSS</span>
-                                    <span>Bootstrap</span>
+                    <div class="col-12 col-md-4">
+                        <article>
+                            <a href="projetos.html#projetos-sala" class="projeto-link">
+                                <div class="projeto-destaque">
+                                    <div class="projeto-conteudo">
+                                        <span class="projeto-numero">PROJETO 01</span>
+                                        <h3 class="text-center">PROJETOS acadêmicos</h3>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </article>
                     </div>
 
-                    <div class="col-lg-6 mt-2">
-                        <article class="projeto-descricao">
-                            <div class="projeto-desConteudo">
-                                <h2 class="text-center">Patas&Lares</h2>
-                                <p>Tenho alguns projetos realizados em sala</p>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="col-lg-6 mt-2">
-                        <article class="projeto-destaque">
-                            <div class="projeto-imagem">
-                                <img src="IMG/prototipoLogo.png" alt="Protótipo de logo do site">
-                            </div>
-
-                            <div class="projeto-conteudo">
-                                <span class="projeto-numero">PROJETO 02</span>
-                                <h3>Leitura</h3>
-                                <p>Um site projetado para armazenar historias, seus temas, capitulos e informações</p>
-                                <div class="tecnologias">
-                                    <span>HTML</span>
-                                    <span>CSS</span>
-                                    <span>Bootstrap</span>
+                    <div class="col-12 col-md-4">
+                        <article>
+                            <a href="projetos.html#projetos-casa" class="projeto-link">
+                                <div class="projeto-destaque">
+                                    <div class="projeto-conteudo">
+                                        <span class="projeto-numero">PROJETO 02</span>
+                                        <h3 class="text-center">PROJETOS pessoais</h3>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </article>
                     </div>
                 </div>
@@ -259,7 +252,7 @@
             <div class="container py-4">
                 <div class="section-title-wrap">
                     <span class="section-tag">Conecte-se Comigo</span>
-                    <h2 class="section-title">Vamos <span class="text-gradient-cyan">Conversar?</span></h2>
+                    <h2 class="section-title">Vamos <span class="text-gradient-color">Conversar?</span></h2>
                     <p class="section-subtitle">
                         Interessado em saber mais sobre meus projetos acadêmicos ou oportunidades de estágio em
                         tecnologia? Envie uma mensagem!
@@ -289,8 +282,8 @@
                                     <i class="bi bi-github"></i>
                                 </div>
                                 <div>
-                                    <h6 class="text-white mb-1">Repositórios no GitHub</h6>
-                                    <span class="small">https://github.com/MariaVanheizens010</span>
+                                    <h6 class="text-white mb-1">GitHub</h6>
+                                    <span class="small">MariaVanheizens010</span>
                                 </div>
                             </a>
 
@@ -325,19 +318,13 @@
                                     </div>
 
                                     <div class="col-12">
-                                        <label for="assunto" class="form-label small">Assunto</label>
-                                        <input type="text" id="assunto" class="form-control form-control-glass"
-                                            placeholder="Ex: Oportunidade de Estágio / Projeto Integrador" required>
-                                    </div>
-
-                                    <div class="col-12">
                                         <label for="mensagem" class="form-label small">Mensagem</label>
                                         <textarea id="mensagem" rows="4" class="form-control form-control-glass"
                                             placeholder="Escreva sua mensagem aqui..." required></textarea>
                                     </div>
 
                                     <div class="col-12 mt-4">
-                                        <button type="submit" class="btn btn-success w-100 py-3">
+                                        <button type="submit" class="btn btn-success w-30 py-3">
                                             <i class="bi bi-send-fill"></i> Transmitir Mensagem
                                         </button>
                                     </div>
@@ -350,6 +337,10 @@
                 </div>
             </div>
         </section>
+
+        <!--==================================================================================================-->
+        <!--============================ FOOTER =====================================================-->
+        <!--==================================================================================================-->
 
     </main>
 </body>

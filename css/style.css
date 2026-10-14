@@ -34,6 +34,12 @@
     --transition-fast: 0.2s ease;
     --transition-smooth: 0.3s ease;
 }
+.text-gradient-color {
+    background: linear-gradient(90deg, #42e475, #dfd474);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 html {
     background: #070118;
@@ -132,8 +138,13 @@ body::after {
 
 main {
     z-index: 2;
+    padding: 4px;
+    margin: 4px;
 }
-
+.container-inicial{
+    width: min(1120px, 96%);
+    margin: 0 auto;
+}
 .hero-section {
     position: relative;
     padding: 7rem 0 4rem;
@@ -177,37 +188,55 @@ main {
     justify-content: center;
     padding: 30px;
 }
-/* Caixa decorativa atrás da imagem */
-.caixa-decoracao {
-    position: absolute;
-    width: 75%;
-    height: 90%;
-    background: #b8a083;
-    z-index: 0;
-    transform: translate(-25px, 25px);
-}
-/* Imagem fica por cima da caixa */
-.hero-avatar-img {
-    position: relative;
-    z-index: 1;
 
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    display: block;
+.foto-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
 }
 
+.foto-perfil {
+    width: 390px;
+    height: 390px;
 
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.foto-perfil:hover {
+    transform: scale(1.04);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+}
+
+@media (max-width: 576px) {
+    .foto-perfil {
+        width: 220px;
+        height: 220px;
+    }
+}
 
 /*===================================================================================================================================================*/
 /*--------------SECTION--------------*/
 /*===================================================================================================================================================*/
 
 section#sobre {
-    background-color: #0701185f;
+    background-color: #1007265f;
 }
 
-.section-title {
+.mim-sobre{
+    text-align: justify;
+}
+
+.section-tag {
     max-width: 100%;
     font-family: var(--font-titulo);
     color: #e0b50bf3;
@@ -248,40 +277,43 @@ section#sobre {
 .painel p {
     text-align: justify;
     line-height: 1.5rem;
-    color: var(--muted);
+    color: var(--text);
 }
 
 
 /*===================================================================================================================================================*/
 /*-------------PROJETOS-------------*/
 /*===================================================================================================================================================*/
+
 section#projetos {
-    padding: 3px 0;
+    padding: 2px;
 }
 
 .projeto-destaque {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 35px;
-    height: 90%;
-    padding: 20px;
-    border: 1px solid #8d8d8d8a;
-
-    border-radius: 18px;
-    background-color: #1a023365;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.406);
+    justify-content: space-between;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    background: var(--glass-bg, rgba(255, 255, 255, 0.045));
+    backdrop-filter: var(--glass-blur, blur(15px));
+    transition: var(--transition-smooth, 0.3s ease);
+    min-height: 200px; 
+    padding: 1.5rem;  
+    gap: 1rem;
 }
 
-.projeto-imagem {
-    flex: 1;
-    overflow: hidden;
-    border-radius: 12px;
+.projeto-destaque:hover {
+    border-color: rgba(124, 214, 149, 0.45);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
-
-.projeto-imagem img {
-    width: 100%;
-    display: block;
-    border-radius: 12px;
+.projeto-numero {
+    font-size: 0.85rem;
+    color: var(--gold);
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .projeto-conteudo {
@@ -289,22 +321,17 @@ section#projetos {
     min-width: 0;
 }
 
-.projeto-numero {
-    font-size: 0.85rem;
-    color: var(--gold);
-    font-weight: 600;
-}
-
 .projeto-conteudo h3 {
-    font-size: 2.2rem;
-    margin: 8px 0 16px;
+    font-size: 1.6rem;
+    margin: 10px 0 10px;
     color: white;
-    line-height: 1.1rem;
 }
 
 .projeto-conteudo p {
     color: var(--muted);
-    line-height: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
 }
 
 .tecnologias {
@@ -315,18 +342,88 @@ section#projetos {
 }
 
 .tecnologias span {
-    padding: 7px 14px;
-    border: 1px solid #8d8d8d8a;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.03); /* Fundo translúcido sutil */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borda suave */
     border-radius: 20px;
     color: var(--text);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: var(--transition-fast, 0.2s ease);
 }
 
+.tecnologias span:hover {
+    background: rgba(139, 92, 246, 0.15); /* Um toque de roxo acentuado */
+    border-color: var(--accent-violet, #8b5cf6);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
 
+.projeto-imagem {
+    flex: 1;
+    min-width: 0;
+}
+
+.projeto-imagem img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.projetos-sala,
+.projetos-casa{
+    padding: 2rem;
+    margin-top: 4px;
+}
+
+.secao-projetos .section-title-wrap {
+    margin-bottom: 2rem;
+}
+.secao-projetos .row {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.projeto-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.projeto-link:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+#projetos .row.g-4 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#projetos .row > .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+#projetos .projeto-link {
+    display: block;
+    height: 100%;
+}
+
+#projetos .projeto-destaque {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.projetos-hero{
+     padding-top: 100px;
+}
 /*===================================================================================================================================================*/
 /*-------------Contato-------------*/
 /*===================================================================================================================================================*/
-
+#contato{
+    background-color: #0701185f;
+}
 .contact-card {
     padding: 2.5rem;
     color: white;
@@ -398,10 +495,29 @@ section#projetos {
 }
 
 
-
-
-
 html,
 body {
     overflow-x: hidden;
+}
+
+/*===================================================================================================================================================*/
+/*-------------Contato-------------*/
+/*===================================================================================================================================================*/
+
+@media (max-width: 768px) {
+    .projeto-destaque-trabalho {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .projeto-imagem {
+        width: 100%;
+    }
+
+    .projeto-imagem img {
+        height: auto;
+        max-height: 280px;
+        object-fit: contain;
+    }
 }
