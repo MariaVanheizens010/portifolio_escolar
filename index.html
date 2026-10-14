@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
     <!--Roboto-->
@@ -41,18 +42,48 @@
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg fixed-top navbar-custom" aria-label="Navegação Principal">
+
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom" aria-label="Navegação principal">
             <div class="container">
+
+                <!-- Nome do portfólio -->
                 <a class="navbar-brand navbar-brand-logo" href="#home">
-                    <span>Portfólio Acadêmico |<span class="text-gradient-color">Maria Machado</span></span>
+                    <span>
+                        Portfólio Acadêmico |
+                        <span class="text-gradient-color">Maria Machado</span>
+                    </span>
                 </a>
-            </div>
-            <div class="container-fluid">
+
+                <!-- Botão para abrir o menu no celular -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir ou fechar menu">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links do menu -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#home">Home</a> </li>
-                        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a> </li>
-                        <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre">
+                                Sobre
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projetos">
+                                Projetos
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">
+                                Contato
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -144,6 +175,10 @@
                                 pessoal e que me permitem explorar diferentes formas
                                 de expressão e criatividade.
                             </p>
+                            <p>
+                                Realizei alguns cursos que possibilitaram o meu aprimoramento na área e também para
+                                entreterimento. Cursos na<strong> Fundação Bradesco|Escola virtual</strong> e CineArt Atualmente.
+                            </p>
                         </div>
                     </div>
                     <!-- Card Ficha Técnica & Informações Rápidas -->
@@ -213,6 +248,8 @@
                 </div>
 
                 <div class="row g-4">
+                    <div class="col-12 col-md-2"></div>
+
                     <div class="col-12 col-md-4">
                         <article>
                             <a href="projetos.html#projetos-sala" class="projeto-link">
@@ -238,6 +275,7 @@
                             </a>
                         </article>
                     </div>
+                    <div class="col-12 col-md-2"></div>
                 </div>
             </div>
         </section>
@@ -343,6 +381,7 @@
         <!--==================================================================================================-->
 
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
