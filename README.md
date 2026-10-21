@@ -2,24 +2,23 @@
 
 Este repositório contém meu portfólio acadêmico, desenvolvido para apresentar minha trajetória de aprendizagem, meus conhecimentos técnicos e os projetos que venho construindo na área de tecnologia.
 
-## 🌐 Aplicação publicada
+## 🌐 Aplicações publicadas
 
-**link do site:**
- -portifólio: https://portifolioescolar-mauve.vercel.app/
- -leitura: https://estudospw.vercel.app/
- -ONG: https://patas-lares.vercel.app/
+- **Portfólio:** https://portifolioescolar-mauve.vercel.app/
+- **Site de leitura:** https://estudospw.vercel.app/
+- **Patas e Lares:** https://patas-lares.vercel.app/
 
-**link dos repositórios GitHub:**
+## 🔗 Repositórios no GitHub
 
- -link do portifólio: https://github.com/MariaVanheizens010/portifolio_escolar
- -link do site de leitura: https://github.com/MariaVanheizens010/Site-de-estudos_Vanheizens010/blob/main/Estudos%20de%20PW/
- -link do projeto Patas e Lares: https://github.com/MariaVanheizens010/Patas-Lares
+- **Portfólio:** https://github.com/MariaVanheizens010/portifolio_escolar
+- **Site de leitura:** https://github.com/MariaVanheizens010/Site-de-estudos_Vanheizens010/blob/main/Estudos%20de%20PW/
+- **Patas e Lares:** https://github.com/MariaVanheizens010/Patas-Lares
 
-**link dos projetos no Vercel:**
- 
- -link do portifólio: https://vercel.com/mefm101110-5131/portifolio_escolar/9tsQ53egkCGp2M9FwzoHB18hCy4m
- -link do site de leitura: https://vercel.com/mefm101110-5131/estudospw/Buh7bxyGjeXFhY7DwReKhzNEUUTT
- -link do projeto: https://vercel.com/mefm101110-5131/patas-lares/Ar8hSREdPwNnRVioqccWpgX6MuZi
+## 🚀 Projetos na Vercel
+
+- **Portfólio:** https://vercel.com/mefm101110-5131/portifolio_escolar/9tsQ53egkCGp2M9FwzoHB18hCy4m
+- **Site de leitura:** https://vercel.com/mefm101110-5131/estudospw/Buh7bxyGjeXFhY7DwReKhzNEUUTT
+- **Patas e Lares:** https://vercel.com/mefm101110-5131/patas-lares/Ar8hSREdPwNnRVioqccWpgX6MuZi
 
 ## 🎯 Objetivo do projeto
 
@@ -34,17 +33,16 @@ O objetivo deste projeto é reunir e apresentar minhas experiências acadêmicas
 
 ## 📂 Seções do portfólio
 
-O portfólio pode reunir as seguintes seções, conforme implementadas no site:
+O portfólio apresenta seções como:
 
-- **Sobre mim e formação:** apresentação pessoal e trajetória acadêmica. Informações sobre a formação e os estudos.
+- **Sobre mim e formação:** apresentação pessoal e trajetória acadêmica.
 - **Habilidades:** tecnologias estudadas e conhecimentos desenvolvidos.
 - **Projetos:** trabalhos e aplicações que demonstram os conhecimentos adquiridos.
-- **Contato** apresentação das redes de acesso 
+- **Contato:** canais para entrar em contato.
 
 ## 📁 Estrutura de arquivos
 
-Estrutura do Portifólio
-
+```text
 portifolio_escolar/
 ├── IMG/
 ├── css/
@@ -52,19 +50,18 @@ portifolio_escolar/
 ├── projetos.html
 ├── sobre.html
 └── README.md
+```
 
 ## 📦 Publicação
 
-O projeto está publicado na **Vercel** e pode ser acessado pelo link informado acima. A publicação permite visualizar o portfólio diretamente pelo navegador.
+O portfólio está publicado na [Vercel](https://portifolioescolar-mauve.vercel.app/) e pode ser acessado diretamente pelo navegador.
 
 ## 👩‍💻 Sobre a autora
 
-**Maria Eduarda Fagundes Machado**
-aluna Etec Fatec - Desenvolvimento de Sistemas.
+**Maria Eduarda Fagundes Machado**  
+Aluna da Etec/Fatec — Desenvolvimento de Sistemas.
 
 ## 📬 Contato
-
-Adicione aqui os canais que deseja divulgar publicamente, por exemplo:
 
 - **GitHub:** https://github.com/MariaVanheizens010
 - **E-mail institucional:** maria.machado41@aluno.cps.sp.gov.br
