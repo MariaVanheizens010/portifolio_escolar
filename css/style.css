@@ -33,7 +33,7 @@
 --glass-shadow-glow: 0 10px 40px rgba(117, 214, 160, 0.12);
 
 /* ===== CORES DE APOIO ===== */
---accent-violet: #75D6A0;
+--accent-green: #4db17a;
 --accent-blue: #8CB9E8;
 --white: #FFFFFF;
 
@@ -54,7 +54,7 @@ strong{
     color: #C084FC;
 }
 html {
-    background: #070118;
+    background: #06011d;
     overflow-x: hidden;
     overscroll-behavior: none;
 }
@@ -63,7 +63,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 
-    background: linear-gradient(135deg, #1d1121, #0f0e39 70%);
+    background: linear-gradient(135deg, #121212, #0f0e39 70%);
 
     color: var(--text);
     margin: 0;
@@ -359,6 +359,51 @@ section#sobre {
     color: var(--text);
 }
 
+.btn-voltar {
+    background: none;
+    border: none;
+    color: var(--gold);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.btn-voltar i {
+    margin-right: 5px;
+}
+
+.btn-voltar:hover {
+    color: var(--accent-green) ;
+    transition: var(--transition-smooth);
+}
+.sobre-description{
+    font-size: 1.15rem;
+    color: var(--muted);
+    max-width: 580px;
+    margin-bottom: 2rem; 
+    text-align: justify;   
+}
+
+
+.sobre-mim-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+.assuntos{
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+
+}
+
+.assuntos:hover {
+    transition: var(--transition-smooth);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    border-color: #7fad94;
+}
 
 /*===================================================================================================================================================*/
 /*-------------PROJETOS-------------*/
@@ -433,7 +478,7 @@ section#projetos {
 
 .tecnologias span:hover {
     background: rgba(139, 92, 246, 0.15); /* Um toque de roxo acentuado */
-    border-color: var(--accent-violet, #8b5cf6);
+    border-color: var(--accent-green, #8b5cf6);
     color: #ffffff;
     transform: translateY(-2px);
 }
@@ -564,7 +609,7 @@ section#projetos {
 
 .form-control-glass:focus {
     background: rgba(255, 255, 255, 0.07) !important;
-    border-color: var(--accent-violet) !important;
+    border-color: var(--accent-green) !important;
     box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.25) !important;
     color: #ffffff !important;
 }
@@ -578,10 +623,6 @@ html,
 body {
     overflow-x: hidden;
 }
-
-/*===================================================================================================================================================*/
-/*-------------Contato-------------*/
-/*===================================================================================================================================================*/
 
 @media (max-width: 768px) {
     .projeto-destaque-trabalho {
