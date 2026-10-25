@@ -1,45 +1,45 @@
 :root {
-   /*Fontes*/
+    /*Fontes*/
     --font-inner: 'Inter', sans-serif;
     --font-Montserrat: 'Montserrat', sans-serif;
     --font-Roboto: 'Roboto', sans-serif;
     --font-titulo: 'Playfair Display', serif;
 
-/* ===== CORES GERAIS ===== */
---gold: #F2C14E;
---text: #F4F7F5;
---muted: #A6B7C8;
---green: #75D6A0;
+    /* ===== CORES GERAIS ===== */
+    --gold: #F2C14E;
+    --text: #F4F7F5;
+    --muted: #A6B7C8;
+    --green: #75D6A0;
 
-/* ===== FUNDO E NAVEGAÇÃO ===== */
---bg-principal: #101D2C;
---bg-secundario: #182B3D;
---bg-navbar: rgba(16, 29, 44, 0.94);
+    /* ===== FUNDO E NAVEGAÇÃO ===== */
+    --bg-principal: #101D2C;
+    --bg-secundario: #182B3D;
+    --bg-navbar: rgba(16, 29, 44, 0.94);
 
-/* ===== SEÇÃO SOBRE ===== */
---bg-painel: rgba(255, 255, 255, 0.06);
---title: #75D6A0;
+    /* ===== SEÇÃO SOBRE ===== */
+    --bg-painel: rgba(255, 255, 255, 0.06);
+    --title: #75D6A0;
 
-/* ===== PROJETOS ===== */
---shadow-bg: rgba(117, 214, 160, 0.12);
---projeto-borda: rgba(255, 255, 255, 0.12);
+    /* ===== PROJETOS ===== */
+    --shadow-bg: rgba(117, 214, 160, 0.12);
+    --projeto-borda: rgba(255, 255, 255, 0.12);
 
-/* ===== EFEITO GLASS ===== */
---glass-bg: rgba(255, 255, 255, 0.055);
---glass-blur: blur(15px);
---glass-border: 1px solid rgba(255, 255, 255, 0.12);
---glass-border-hover: 1px solid rgba(117, 214, 160, 0.45);
---glass-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
---glass-shadow-glow: 0 10px 40px rgba(117, 214, 160, 0.12);
+    /* ===== EFEITO GLASS ===== */
+    --glass-bg: rgba(255, 255, 255, 0.055);
+    --glass-blur: blur(15px);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.12);
+    --glass-border-hover: 1px solid rgba(117, 214, 160, 0.45);
+    --glass-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+    --glass-shadow-glow: 0 10px 40px rgba(117, 214, 160, 0.12);
 
-/* ===== CORES DE APOIO ===== */
---accent-green: #4db17a;
---accent-blue: #8CB9E8;
---white: #FFFFFF;
+    /* ===== CORES DE APOIO ===== */
+    --accent-green: #4db17a;
+    --accent-blue: #8CB9E8;
+    --white: #FFFFFF;
 
-/* ===== TRANSIÇÕES ===== */
---transition-fast: 0.2s ease;
---transition-smooth: 0.3s ease;
+    /* ===== TRANSIÇÕES ===== */
+    --transition-fast: 0.2s ease;
+    --transition-smooth: 0.3s ease;
 
 
 }
@@ -50,9 +50,11 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-strong{
+
+strong {
     color: #C084FC;
 }
+
 html {
     background: #06011d;
     overflow-x: hidden;
@@ -220,10 +222,12 @@ main {
     padding: 4px;
     margin: 4px;
 }
-.container-inicial{
+
+.container-inicial {
     width: min(1120px, 96%);
     margin: 0 auto;
 }
+
 .hero-section {
     position: relative;
     padding: 7rem 0 4rem;
@@ -288,7 +292,7 @@ main {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 
     transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
+        box-shadow 0.3s ease;
 }
 
 .foto-perfil:hover {
@@ -311,7 +315,7 @@ section#sobre {
     background-color: #1007265f;
 }
 
-.mim-sobre{
+.mim-sobre {
     text-align: justify;
 }
 
@@ -373,15 +377,16 @@ section#sobre {
 }
 
 .btn-voltar:hover {
-    color: var(--accent-green) ;
+    color: var(--accent-green);
     transition: var(--transition-smooth);
 }
-.sobre-description{
+
+.sobre-description {
     font-size: 1.15rem;
     color: var(--muted);
     max-width: 580px;
-    margin-bottom: 2rem; 
-    text-align: justify;   
+    margin-bottom: 2rem;
+    text-align: justify;
 }
 
 
@@ -390,7 +395,8 @@ section#sobre {
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
 }
-.assuntos{
+
+.assuntos {
     border: 1px solid #ccc;
     border-radius: 12px;
     padding: 25px;
@@ -405,58 +411,137 @@ section#sobre {
     border-color: #7fad94;
 }
 
+.assuntos ul {
+    text-align: justify !important;
+}
+
+.assuntos li:hover {
+    color: var(--gold);
+
+}
+
 /*===================================================================================================================================================*/
 /*-------------PROJETOS-------------*/
 /*===================================================================================================================================================*/
 
-section#projetos {
-    padding: 2px;
+/* ========================================
+   1. PÁGINA INICIAL — SEÇÃO DE PROJETOS
+======================================== */
+
+#projetos {
+    padding: 50px 0;
 }
 
-.projeto-destaque {
+/* Cartões da página inicial */
+#projetos .projeto-destaque {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    padding: 1.5rem;
+    gap: 1rem;
+
+    box-sizing: border-box;
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 16px;
     background: var(--glass-bg, rgba(255, 255, 255, 0.045));
-    backdrop-filter: var(--glass-blur, blur(15px));
-    transition: var(--transition-smooth, 0.3s ease);
-    min-height: 200px; 
-    padding: 1.5rem;  
-    gap: 1rem;
+
+    transition: border-color 0.3s ease,
+                background-color 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
 }
 
-.projeto-destaque:hover {
-    border-color: rgba(124, 214, 149, 0.45);
+/* Efeito ao passar o mouse */
+#projetos .projeto-link:hover .projeto-destaque {
+    border-color: rgba(124, 214, 149, 0.6);
+    background-color: rgba(255, 255, 255, 0.07);
     transform: translateY(-4px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
+
+/* Links dos cartões */
+.projeto-link {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+
+.projeto-link:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Ícones, números e conteúdo */
+.projeto-icon {
+    flex-shrink: 0;
+    font-size: 20px;
+    margin: 0;
+}
+
 .projeto-numero {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+
+    color: var(--gold, #f2c14e);
     font-size: 0.85rem;
-    color: var(--gold);
     font-weight: 600;
     letter-spacing: 1px;
 }
 
-.projeto-conteudo {
-    flex: 1;
+#projetos .projeto-conteudo {
+    flex: 0 0 100%;
+    width: 100%;
     min-width: 0;
 }
 
-.projeto-conteudo h3 {
+#projetos .projeto-conteudo h3 {
+    margin: 10px 0;
+    color: #ffffff;
     font-size: 1.6rem;
-    margin: 10px 0 10px;
-    color: white;
 }
 
-.projeto-conteudo p {
-    color: var(--muted);
+#projetos .projeto-conteudo p {
+    margin-bottom: 1.5rem;
+    color: var(--muted, #aeb6cb);
     font-size: 0.95rem;
     line-height: 1.6;
-    margin-bottom: 1.5rem;
 }
+
+/* Texto de ação */
+#projetos .projeto-acao {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--green);
+    transition: color 0.3s ease;
+}
+
+#projetos .projeto-link:hover .projeto-acao {
+    color: var(--gold, #f2c14e);
+}
+
+/* Espaçamento da grade */
+#projetos .projetos-grid {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+#projetos .projetos-grid > div {
+    display: flex;
+}
+
+
+/* ========================================
+   2. TECNOLOGIAS DOS PROJETOS
+======================================== */
 
 .tecnologias {
     display: flex;
@@ -467,21 +552,31 @@ section#projetos {
 
 .tecnologias span {
     padding: 6px 12px;
-    background: rgba(255, 255, 255, 0.03); /* Fundo translúcido sutil */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Borda suave */
+
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
-    color: var(--text);
+
+    color: var(--text, #e7e8f5);
     font-size: 0.8rem;
     font-weight: 500;
-    transition: var(--transition-fast, 0.2s ease);
+
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.2s ease;
 }
 
 .tecnologias span:hover {
-    background: rgba(139, 92, 246, 0.15); /* Um toque de roxo acentuado */
-    border-color: var(--accent-green, #8b5cf6);
+    background: rgba(139, 92, 246, 0.15);
+    border-color: #8b5cf6;
     color: #ffffff;
     transform: translateY(-2px);
 }
+
+
+/* ========================================
+   3. IMAGENS DOS PROJETOS
+======================================== */
 
 .projeto-imagem {
     flex: 1;
@@ -495,8 +590,37 @@ section#projetos {
     object-fit: cover;
     border-radius: 12px;
 }
+
+
+/* ========================================
+   4. PÁGINA projetos.html
+======================================== */
+
+/* Apresentação */
+.projetos-hero {
+    padding-top: 100px;
+}
+
+.projetos-hero h1,
+.projetos-hero p,
+.secao-projetos .section-title {
+    color: #f5f5ff;
+}
+
+.projetos-hero p {
+    line-height: 1.7;
+}
+
+.projetos-hero .text-gradient-color {
+    background: linear-gradient(90deg, #43e97b, #a8e063);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Espaçamento das seções */
 .projetos-sala,
-.projetos-casa{
+.projetos-casa {
     padding: 2rem;
     margin-top: 4px;
 }
@@ -504,50 +628,170 @@ section#projetos {
 .secao-projetos .section-title-wrap {
     margin-bottom: 2rem;
 }
-.secao-projetos .row {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+
+.secao-projetos .section-tag,
+.secao-projetos .projeto-numero {
+    color: #f2c14e;
 }
 
-.projeto-link {
-    display: block;
-    color: inherit;
-    text-decoration: none;
-}
-
-.projeto-link:hover {
-    color: inherit;
-    text-decoration: none;
-}
-
-#projetos .row.g-4 {
+/* Cartões da página de projetos */
+.secao-projetos .projeto-destaque {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    padding: 24px;
+
+    box-sizing: border-box;
+    background: var(--glass-bg, rgba(255, 255, 255, 0.045));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+
+    transition: border-color 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
 }
-#projetos .row > .col-md-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
+
+/* Hover dos cartões */
+.secao-projetos .projeto-link:hover .projeto-destaque {
+    border-color: rgba(124, 214, 149, 0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
-#projetos .projeto-link {
+
+/* Imagens ao lado do conteúdo */
+.secao-projetos .projeto-imagem {
+    flex: 0 0 52%;
+    max-width: 52%;
+    min-width: 0;
+}
+
+.secao-projetos .projeto-imagem img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Texto dos cartões */
+.secao-projetos .projeto-conteudo {
+    flex: 1 1 0%;
+    width: auto;
+    min-width: 0;
+}
+
+.secao-projetos .projeto-conteudo h3 {
+    margin: 10px 0;
+    color: #f5f5ff;
+    font-size: 1.6rem;
+}
+
+.secao-projetos .projeto-conteudo p {
+    margin-bottom: 1.5rem;
+    color: var(--muted, #aeb6cb);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Links sem sublinhado */
+.secao-projetos .projeto-link,
+.secao-projetos .projeto-link:hover {
     display: block;
     height: 100%;
+    color: inherit;
+    text-decoration: none;
 }
 
-#projetos .projeto-destaque {
-    height: 100%;
-    box-sizing: border-box;
+/* Etiqueta de projeto em andamento */
+.secao-projetos .projeto-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: rgba(242, 193, 78, 0.1);
+    border: 1px solid rgba(242, 193, 78, 0.25);
+
+    color: #f2c14e;
+    font-size: 0.8rem;
 }
 
-.projetos-hero{
-     padding-top: 100px;
+.secao-projetos .projeto-em-breve {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #7cd695;
+    font-size: 0.9rem;
 }
+
+
+/* ========================================
+   5. RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 767px) {
+    #projetos {
+        padding: 35px 0;
+    }
+
+    #projetos .projeto-destaque {
+        min-height: 180px;
+        padding: 1.25rem;
+    }
+
+    #projetos .projeto-conteudo h3 {
+        font-size: 1.3rem;
+    }
+
+    .secao-projetos .projeto-destaque {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 18px;
+        padding: 18px;
+    }
+
+    .secao-projetos .projeto-imagem {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .secao-projetos .projeto-imagem img {
+        height: auto;
+        max-height: 280px;
+    }
+
+    .secao-projetos .projeto-conteudo {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+
+    .secao-projetos .projeto-conteudo h3 {
+        font-size: 1.35rem;
+    }
+
+    .projetos-sala,
+    .projetos-casa {
+        padding: 1rem;
+    }
+}
+
 /*===================================================================================================================================================*/
 /*-------------Contato-------------*/
 /*===================================================================================================================================================*/
-#contato{
+#contato {
     background-color: #0701185f;
 }
+
 .contact-card {
     padding: 2.5rem;
     color: white;
@@ -640,4 +884,65 @@ body {
         max-height: 280px;
         object-fit: contain;
     }
+}
+
+
+
+
+
+/* ========================================
+   FOOTER — PORTFÓLIO ACADÊMICO
+======================================== */
+
+.footer-portfolio {
+    border-top: 1px solid rgba(124, 214, 149, 0.2);
+    padding-top: 0px;
+}
+
+/* Nome do portfólio */
+.footer-brand {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    color: #7cd695;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none !important;
+
+    transition: color 0.3s ease;
+}
+
+.footer-brand:hover {
+    color: #f2c14e;
+}
+
+/* Texto final */
+.footer-bottom {
+    color: #858ba3;
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+/* Footer do portfólio */
+.footer-portfolio {
+    border-top: 1px solid rgba(124, 214, 149, 0.2);
+}
+
+.footer-brand {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #7cd695;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer-description {
+    color: #aeb6cb;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.12);
+    opacity: 1;
 }
