@@ -420,6 +420,40 @@ section#sobre {
 
 }
 
+/* Tablets */
+@media (max-width: 991.98px) {
+    .sobre-mim-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
+}
+
+/* Celulares */
+@media (max-width: 575.98px) {
+    .sobre-mim-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+    }
+
+    .secao-informativa .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .section-title {
+        font-size: clamp(1.35rem, 5vw, 1.8rem);
+        overflow-wrap: break-word;
+    }
+
+    .section-tag {
+        font-size: 0.8rem;
+    }
+
+    .assuntos {
+        font-size: 0.95rem;
+    }
+}
+
 /*===================================================================================================================================================*/
 /*-------------PROJETOS-------------*/
 /*===================================================================================================================================================*/
